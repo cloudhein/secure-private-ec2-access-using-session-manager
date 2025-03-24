@@ -1,7 +1,7 @@
 # Create VPC Interface Endpoints
 resource "aws_vpc_endpoint" "vpc_interace_ep" {
 
-  for_each          = local.vpc_interface_endpoints
+  for_each = local.vpc_interface_endpoints
 
   vpc_id            = aws_vpc.secure-vpc.id
   service_name      = each.key

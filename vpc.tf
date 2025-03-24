@@ -10,8 +10,8 @@ resource "aws_vpc" "secure-vpc" {
 }
 
 resource "aws_subnet" "private-subnet-1" {
-  vpc_id     = aws_vpc.secure-vpc.id
-  cidr_block = var.subnet1_cidr
+  vpc_id            = aws_vpc.secure-vpc.id
+  cidr_block        = var.subnet1_cidr
   availability_zone = "ap-northeast-1a" #Different AZs
 
   tags = {
@@ -20,8 +20,8 @@ resource "aws_subnet" "private-subnet-1" {
 }
 
 resource "aws_subnet" "private-subnet-2" {
-  vpc_id     = aws_vpc.secure-vpc.id
-  cidr_block = var.subnet2_cidr
+  vpc_id            = aws_vpc.secure-vpc.id
+  cidr_block        = var.subnet2_cidr
   availability_zone = "ap-northeast-1c" #Different AZs
 
   tags = {

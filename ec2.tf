@@ -22,11 +22,11 @@ resource "aws_instance" "instances" {
   instance_type          = local.instance_type
   vpc_security_group_ids = [aws_security_group.instances_sg.id]
   subnet_id              = element(data.aws_subnets.private_vpc_subnets.ids, count.index) # create instances in different subnets
-  iam_instance_profile   = aws_iam_instance_profile.ssm_profile.id # attach ssm iam role so that it can have permission to talk to ssm manager
+  iam_instance_profile   = aws_iam_instance_profile.ssm_profile.id                        # attach ssm iam role so that it can have permission to talk to ssm manager
 
   tags = {
     Name        = "${local.instance_name}-${count.index + 1}"
     Environment = local.environment
   }
-  
+
 }
