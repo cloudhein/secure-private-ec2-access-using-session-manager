@@ -11,14 +11,14 @@ output "ec2_instance_id" {
 }
 
 # Output ssm user access key
-output "dev_user_access_key" {
+output "ssm_user_access_key" {
   description = "Access key for the ssm user"
   value       = aws_iam_access_key.ssm_user_access_keys.id
   sensitive   = true
 }
 
 # Output ssm user secret access key
-output "dev_user_secret_key" {
+output "ssm_user_secret_key" {
   description = "Secret access key for the Dev User"
   value       = aws_iam_access_key.ssm_user_access_keys.secret
   sensitive   = true

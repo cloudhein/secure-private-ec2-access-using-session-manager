@@ -51,3 +51,21 @@ variable "region" {
   description = "Your VPC endpoint regions"
   default     = "ap-northeast-1"
 }
+
+variable "vpc_cidr" {
+    type = string
+    description = "VPC CIDR Address"
+    default = "172.21.0.0/16"
+}
+
+variable "subnet1_cidr" {
+    type = string
+    description = "Subet 1 CIDR Address"
+    default = "172.21.0.0/20"
+}
+
+variable "subnet2_cidr" {
+    type = string
+    description = "Subet 2 CIDR Address"
+    default = "172.21.16.0/20"
+}

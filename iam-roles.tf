@@ -1,3 +1,4 @@
+# Create IAM role for EC2 Server (SSM Access)
 resource "aws_iam_role" "ssm_role" {
   name = "ssm_role"
 
